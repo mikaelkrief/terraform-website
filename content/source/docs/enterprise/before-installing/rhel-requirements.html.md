@@ -24,9 +24,11 @@ When installing Terraform Enterprise on RedHat Enterprise Linux (RHEL), ensure y
 
 #### Pinning the Docker Version
 
+To downgrade from docker-1.13.1-84.git07f3374.el7.x86_64 to docker-1.13.1-72.git6f36bd4el7.x86_64 follow the instructions below.
+
 If docker-1.13.1-84.git07f3374.el7.x86_64 is already installed, first run:
 
-```sudo yum downgrade docker docker-client docker-common docker-rhel-push-plugin```
+```sudo yum downgrade docker-1.13.1-72.git6f36bd4el7.x86_64 docker-client-1.13.1-72.git6f36bd4el7.x86_64 docker-common-1.13.1-72.git6f36bd4el7.x86_64 docker-rhel-push-plugin-1.13.1-72.git6f36bd4el7.x86_64```
 
 Then, restart Docker and ensure the installed version changes to 1.13.1-72.git6f36bd4el7.x86_64. To pin the version and prevent an inadvertent upgrade, follow [this guide](https://access.redhat.com/solutions/98873)from RedHat.
 
